@@ -222,13 +222,14 @@ unique_name_in_owner = true
 script = ExtResource("1_gee14")
 
 [node name="ScoreLabel" type="Label" parent="GameManager"]
-offset_left = 543.0
-offset_top = -137.0
-offset_right = 648.0
-offset_bottom = -118.0
+offset_left = 546.0
+offset_top = -160.0
+offset_right = 651.0
+offset_bottom = -108.0
 theme_override_fonts/font = ExtResource("2_0tnpc")
 theme_override_font_sizes/font_size = 8
 text = "Du samlade X mynt
+och får 500 kr i present.
 "
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -307,13 +308,20 @@ position = Vector2(546, 81)
 [node name="Labels" type="Node" parent="."]
 
 [node name="Label" type="Label" parent="Labels"]
-offset_left = -101.0
-offset_top = 44.0
-offset_right = 20.0
-offset_bottom = 58.0
+offset_left = -107.0
+offset_top = -15.0
+offset_right = 14.0
+offset_bottom = 59.0
 theme_override_fonts/font = ExtResource("7_u5sy4")
 theme_override_font_sizes/font_size = 8
-text = "Space för att hoppa"
+text = "Grattis Wilde på
+födelsedagen
+önskar
+Zaijan och Johan
+
+Klara spelet för 
+att få din present."
+horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="Labels"]
 offset_left = 375.0
@@ -335,10 +343,10 @@ text = "Nästan där...
 "
 
 [node name="Label4" type="Label" parent="Labels"]
-offset_left = 520.0
-offset_top = -151.0
-offset_right = 677.0
-offset_bottom = -139.0
+offset_left = 521.0
+offset_top = -172.0
+offset_right = 711.0
+offset_bottom = -160.0
 theme_override_fonts/font = ExtResource("7_u5sy4")
 theme_override_font_sizes/font_size = 8
 text = "Grattis på födelsedagen! Wilde"
