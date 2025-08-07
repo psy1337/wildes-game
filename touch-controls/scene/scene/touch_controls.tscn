@@ -10,35 +10,36 @@ script = ExtResource("1_7oguq")
 
 [node name="UIRoot" type="Control" parent="."]
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -0.296
 offset_right = 890.344
+grow_horizontal = 2
 grow_vertical = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UIRoot"]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
+anchors_preset = 2
+anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = 485.274
 offset_right = 1000.0
 grow_vertical = 0
 
 [node name="Jump" type="TouchScreenButton" parent="UIRoot/HBoxContainer"]
-position = Vector2(849, 18)
+position = Vector2(849, -120)
 scale = Vector2(1.25, 1.25)
 texture_normal = ExtResource("3_qhlwf")
 action = "jump"
 
 [node name="Right" type="TouchScreenButton" parent="UIRoot/HBoxContainer"]
-position = Vector2(282, 18)
+position = Vector2(281, -120)
 scale = Vector2(1.25, 1.25)
 texture_normal = ExtResource("2_7oguq")
 action = "right"
 
 [node name="Left" type="TouchScreenButton" parent="UIRoot/HBoxContainer"]
-position = Vector2(52, 18)
+position = Vector2(60, -120)
 scale = Vector2(1.25, 1.25)
 texture_normal = ExtResource("1_pguoa")
 action = "left"
