@@ -8,27 +8,36 @@
 [node name="TouchControls" type="CanvasLayer"]
 script = ExtResource("1_7oguq")
 
-[node name="Left" type="TouchScreenButton" parent="."]
-position = Vector2(53, 500)
-scale = Vector2(1.25, 1.25)
-texture_normal = ExtResource("1_pguoa")
-action = "left"
+[node name="UIRoot" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -162.0
+offset_right = 1021.0
+grow_vertical = 0
 
-[node name="Right" type="TouchScreenButton" parent="."]
-position = Vector2(283, 500)
-scale = Vector2(1.25, 1.25)
-texture_normal = ExtResource("2_7oguq")
-action = "right"
-
-[node name="Jump" type="TouchScreenButton" parent="."]
-position = Vector2(850, 500)
+[node name="Jump" type="TouchScreenButton" parent="UIRoot"]
+position = Vector2(849, 18)
 scale = Vector2(1.25, 1.25)
 texture_normal = ExtResource("3_qhlwf")
 action = "jump"
 
-[connection signal="pressed" from="Left" to="." method="_on_left_pressed"]
-[connection signal="released" from="Left" to="." method="_on_left_released"]
-[connection signal="pressed" from="Right" to="." method="_on_right_pressed"]
-[connection signal="released" from="Right" to="." method="_on_right_released"]
-[connection signal="pressed" from="Jump" to="." method="_on_jump_pressed"]
-[connection signal="released" from="Jump" to="." method="_on_jump_released"]
+[node name="Right" type="TouchScreenButton" parent="UIRoot"]
+position = Vector2(282, 18)
+scale = Vector2(1.25, 1.25)
+texture_normal = ExtResource("2_7oguq")
+action = "right"
+
+[node name="Left" type="TouchScreenButton" parent="UIRoot"]
+position = Vector2(52, 18)
+scale = Vector2(1.25, 1.25)
+texture_normal = ExtResource("1_pguoa")
+action = "left"
+
+[connection signal="pressed" from="UIRoot/Jump" to="." method="_on_jump_pressed"]
+[connection signal="released" from="UIRoot/Jump" to="." method="_on_jump_released"]
+[connection signal="pressed" from="UIRoot/Right" to="." method="_on_right_pressed"]
+[connection signal="released" from="UIRoot/Right" to="." method="_on_right_released"]
+[connection signal="pressed" from="UIRoot/Left" to="." method="_on_left_pressed"]
+[connection signal="released" from="UIRoot/Left" to="." method="_on_left_released"]
