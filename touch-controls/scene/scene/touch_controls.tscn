@@ -17,27 +17,36 @@ offset_top = -162.0
 offset_right = 1021.0
 grow_vertical = 0
 
-[node name="Jump" type="TouchScreenButton" parent="UIRoot"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UIRoot"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -159.0
+offset_right = 1000.0
+grow_vertical = 0
+
+[node name="Jump" type="TouchScreenButton" parent="UIRoot/HBoxContainer"]
 position = Vector2(849, 18)
 scale = Vector2(1.25, 1.25)
 texture_normal = ExtResource("3_qhlwf")
 action = "jump"
 
-[node name="Right" type="TouchScreenButton" parent="UIRoot"]
+[node name="Right" type="TouchScreenButton" parent="UIRoot/HBoxContainer"]
 position = Vector2(282, 18)
 scale = Vector2(1.25, 1.25)
 texture_normal = ExtResource("2_7oguq")
 action = "right"
 
-[node name="Left" type="TouchScreenButton" parent="UIRoot"]
+[node name="Left" type="TouchScreenButton" parent="UIRoot/HBoxContainer"]
 position = Vector2(52, 18)
 scale = Vector2(1.25, 1.25)
 texture_normal = ExtResource("1_pguoa")
 action = "left"
 
-[connection signal="pressed" from="UIRoot/Jump" to="." method="_on_jump_pressed"]
-[connection signal="released" from="UIRoot/Jump" to="." method="_on_jump_released"]
-[connection signal="pressed" from="UIRoot/Right" to="." method="_on_right_pressed"]
-[connection signal="released" from="UIRoot/Right" to="." method="_on_right_released"]
-[connection signal="pressed" from="UIRoot/Left" to="." method="_on_left_pressed"]
-[connection signal="released" from="UIRoot/Left" to="." method="_on_left_released"]
+[connection signal="pressed" from="UIRoot/HBoxContainer/Jump" to="." method="_on_jump_pressed"]
+[connection signal="released" from="UIRoot/HBoxContainer/Jump" to="." method="_on_jump_released"]
+[connection signal="pressed" from="UIRoot/HBoxContainer/Right" to="." method="_on_right_pressed"]
+[connection signal="released" from="UIRoot/HBoxContainer/Right" to="." method="_on_right_released"]
+[connection signal="pressed" from="UIRoot/HBoxContainer/Left" to="." method="_on_left_pressed"]
+[connection signal="released" from="UIRoot/HBoxContainer/Left" to="." method="_on_left_released"]
